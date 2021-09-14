@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Comment-Form-Technical-Task/static/css/main.a617e044.chunk.css",
+    "main.js": "/Comment-Form-Technical-Task/static/js/main.6a09518b.chunk.js",
+    "main.js.map": "/Comment-Form-Technical-Task/static/js/main.6a09518b.chunk.js.map",
+    "runtime-main.js": "/Comment-Form-Technical-Task/static/js/runtime-main.a5281c8f.js",
+    "runtime-main.js.map": "/Comment-Form-Technical-Task/static/js/runtime-main.a5281c8f.js.map",
+    "static/js/2.9c4b3ac1.chunk.js": "/Comment-Form-Technical-Task/static/js/2.9c4b3ac1.chunk.js",
+    "static/js/2.9c4b3ac1.chunk.js.map": "/Comment-Form-Technical-Task/static/js/2.9c4b3ac1.chunk.js.map",
+    "static/js/3.a432bcc6.chunk.js": "/Comment-Form-Technical-Task/static/js/3.a432bcc6.chunk.js",
+    "static/js/3.a432bcc6.chunk.js.map": "/Comment-Form-Technical-Task/static/js/3.a432bcc6.chunk.js.map",
+    "index.html": "/Comment-Form-Technical-Task/index.html",
+    "static/css/main.a617e044.chunk.css.map": "/Comment-Form-Technical-Task/static/css/main.a617e044.chunk.css.map",
+    "static/js/2.9c4b3ac1.chunk.js.LICENSE.txt": "/Comment-Form-Technical-Task/static/js/2.9c4b3ac1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a5281c8f.js",
+    "static/js/2.9c4b3ac1.chunk.js",
+    "static/css/main.a617e044.chunk.css",
+    "static/js/main.6a09518b.chunk.js"
+  ]
+}
