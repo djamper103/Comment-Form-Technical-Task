@@ -20,7 +20,7 @@ export default function InputForm() {
     const [name,setName]=useState("")
     const [text,setText]=useState("")
 
-    const { register, handleSubmit, formState:{ errors } } = useForm({
+    const { register, handleSubmit, formState:{ errors },reset } = useForm({
         resolver: yupResolver(schema)
     });
 
@@ -48,8 +48,7 @@ export default function InputForm() {
         .then(respons=>{
             console.log(respons.status)
         })
-        setName("")
-        setText("")
+        reset()
     }
 
 
@@ -60,7 +59,7 @@ export default function InputForm() {
 
                     <h3>Name</h3>
 
-                    <input {...register("name", { required: true })} value={name} onChange={(e)=>setName(e.target.value)}/>
+                    <input {...register("name", { required: true })} />
                     <p>{errors.name?.message}</p>
 
                 </div>
@@ -69,7 +68,7 @@ export default function InputForm() {
 
                     <h3>Your text</h3>
 
-                    <input {...register("text", { required: true })} value={text} onChange={(e)=>setText(e.target.value)}/>
+                    <input {...register("text", { required: true })} />
                     <p>{errors.text?.message}</p>
 
                 </div>
