@@ -14,14 +14,11 @@ function App() {
 
 
   useEffect(()=>{
-      let a=[...state]
-      if(a!==state){
-        axios.get(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
-        .then(respons=>{
-            setState([...respons.data.data])
-            setPagesCount(respons.data.last_page)
-        })
-      }
+      axios.get(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
+      .then(respons=>{
+          setState([...respons.data.data])
+          setPagesCount(respons.data.last_page)
+      })
   },[page,state])
 
   function onPageChange(pageCount) {
