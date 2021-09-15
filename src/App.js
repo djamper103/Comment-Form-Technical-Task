@@ -18,15 +18,13 @@ function App() {
       if(!state){
         axios.get(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
         .then(respons=>{
-            debugger
             setState([...respons.data.data])
             setPagesCount(respons.data.last_page)
             setCheckPage(page)
         })
-      }else if(state&&page!=checkPage){
+      }else if(state&&page!==checkPage){
         axios.get(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
         .then(respons=>{
-            debugger
             setState([...respons.data.data])
             setPagesCount(respons.data.last_page)
             setCheckPage(page)
