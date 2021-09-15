@@ -34,10 +34,9 @@ export default function InputForm({}) {
 
             <form onSubmit={handleSubmit(submit)}>
 
-                
                 <div className={style.name}>
-
-                    <h3>Name</h3>
+                
+                    <h3>Write your name</h3>
 
                     <input {...register("name", { required: true })} />
                     <p>{errors.name?.message}</p>
@@ -46,7 +45,7 @@ export default function InputForm({}) {
 
                 <div>
 
-                    <h3>Your text</h3>
+                    <h3>Write your text</h3>
 
                     <input {...register("text", { required: true })} />
                     <p>{errors.text?.message}</p>

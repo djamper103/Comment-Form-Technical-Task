@@ -1,19 +1,28 @@
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
+    margin: 0 50px;
     color: #000;
-    font-size: 20px;
+    font-size: 24px;
     word-break: break-all;
-    width: 500px;
 }
 .container h3{
     font-size: 24px;
+    text-align: center;
 }
 .container ul{
     padding: 0;
 }
 .container li{
     list-style-type: none;
+}
+
+@media all and (max-width: 800px) {
+    .container{
+        font-size: 22px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .container input{
+        font-size: 20px;
+    }
 }
