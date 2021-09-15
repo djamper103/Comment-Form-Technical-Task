@@ -3,6 +3,7 @@ import axios from "axios"
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
+import style from "./inputForm.module.css"
 
 
 const schema = yup.object().shape({
@@ -29,11 +30,12 @@ export default function InputForm({}) {
     }
 
     return (
-        <div>
+        <div className={style.container}>
 
             <form onSubmit={handleSubmit(submit)}>
+
                 
-                <div>
+                <div className={style.name}>
 
                     <h3>Name</h3>
 
@@ -51,7 +53,9 @@ export default function InputForm({}) {
 
                 </div>
                 
-                <input type="submit"/>
+                <div className={style.submit}>
+                    <input type="submit" value="Submit"/>
+                </div>
 
             </form>
 

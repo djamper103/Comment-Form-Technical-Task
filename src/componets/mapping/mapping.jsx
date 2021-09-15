@@ -1,10 +1,11 @@
 import React from 'react'
+import style from "./mapping.module.css"
 
 
 export default function Mapping({state=[]}) {
 
     return (
-        <div>
+        <div className={style.container}>
             <h3>Comments</h3>
         {
             state?state.length>0?state.map(item=>(
@@ -14,6 +15,6 @@ export default function Mapping({state=[]}) {
                 </ul>
             )):"Data has not been loaded yet":"Data has not been loaded yet"
         }
-    </div>
+        </div>
     )
 }

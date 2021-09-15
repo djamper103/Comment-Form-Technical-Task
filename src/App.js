@@ -3,6 +3,7 @@ import axios from "axios"
 import InputForm from "./componets/form/inputForm"
 import Mapping from './componets/mapping/mapping';
 import BasicPagination from "./common/pagination"
+import style from "./App.module.css"
 
 
 function App() {
@@ -13,11 +14,14 @@ function App() {
 
 
   useEffect(()=>{
-      axios.get(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
-      .then(respons=>{
-          setState([...respons.data.data])
-          setPagesCount(respons.data.last_page)
-      })
+      let a=[...state]
+      if(a!==state){
+        axios.get(`https://jordan.ashton.fashion/api/goods/30/comments?page=${page}`)
+        .then(respons=>{
+            setState([...respons.data.data])
+            setPagesCount(respons.data.last_page)
+        })
+      }
   },[page,state])
 
   function onPageChange(pageCount) {
@@ -29,16 +33,17 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className={style.app}>
         <InputForm/>
 
         <Mapping state={state}/>
 
-        {
-          page>=pagesCount?null:<button onClick={()=>morePages()}>More Pages</button>
-        }
-
-        <BasicPagination pagesCount={pagesCount} onPageChange={onPageChange} page={page}/>
+          {
+            page>=pagesCount?null:<button onClick={()=>morePages()}>More Pages</button>
+          }
+        
+          <BasicPagination pagesCount={pagesCount} onPageChange={onPageChange} page={page}/>
+    
     </div>
   );
 }
