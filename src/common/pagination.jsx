@@ -7,8 +7,10 @@ let BasicPagination=({onPageChange,pagesCount,page})=>{
     return (
         <div style={{margin:"40px"}}>
             <Pagination count={pagesCount} page={page} color="secondary" variant="outlined" shape="rounded" siblingCount={2}
-                        onChange={(event, page) => { onPageChange(page)}}/>
+                        onChange={(event, page) => { onPageChange(page)}}
+            />
         </div>
     );
 }
+
 export default  BasicPagination
